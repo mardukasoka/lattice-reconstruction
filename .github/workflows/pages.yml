@@ -21,13 +21,12 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build current Inform toolchain
         run: |
-          cd ..
-          git clone --depth 1 https://github.com/ganelson/inweb.git
-          git clone --depth 1 https://github.com/ganelson/intest.git
-          git clone --depth 1 https://github.com/ganelson/inform.git inform-toolchain
-          (cd inweb && bash scripts/first.sh linux)
-          (cd intest && bash scripts/first.sh linux)
-          (cd inform-toolchain && bash scripts/first.sh linux)
+          git clone --depth 1 https://github.com/ganelson/inweb.git ../inweb
+          git clone --depth 1 https://github.com/ganelson/intest.git ../intest
+          git clone --depth 1 https://github.com/ganelson/inform.git ../inform-toolchain
+          (cd .. && bash inweb/scripts/first.sh linux)
+          (cd .. && bash intest/scripts/first.sh linux)
+          (cd ../inform-toolchain && bash scripts/first.sh linux)
       - name: Compile reconstruction source to Glulx
         run: |
           mkdir -p build
