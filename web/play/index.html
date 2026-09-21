@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lattice Reconstruction — Play</title>
+<link rel="stylesheet" href="glkote.css"><link rel="stylesheet" href="dialog.css">
+<style>html,body{margin:0;min-height:100%;background:#090b0a;color:#d8e1dc}body{font-family:ui-monospace,monospace}#gameport{min-height:100vh}.loading{padding:1rem}</style>
+<script src="jquery-1.12.4.min.js"></script><script src="glkote.min.js"></script><script src="quixe.min.js"></script><script src="resourcemap.js"></script>
+</head>
+<body><div id="gameport"><div class="loading">RECOVERY CONSOLE // loading reconstruction…</div></div>
+<script>
+window.addEventListener("load",function(){
+  if(!window.Quixe){document.querySelector(".loading").textContent="RECOVERY ERROR // Quixe unavailable";return;}
+  Quixe.init({image_info_map:window.StaticImageInfo||{},sound_info_map:window.StaticSoundInfo||{},game_file:"reconstruction.ulx",default_page_title:"Lattice Reconstruction",engine_name:"Quixe"});
+});
+</script></body></html>
