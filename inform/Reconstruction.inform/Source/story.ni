@@ -25,7 +25,7 @@ Transmission Gallery is east of Library of Alexandria. "The room represents tran
 House of Wisdom Threshold is east of Transmission Gallery. "The reconstruction refuses to collapse later legend, modern imagery, and Abbasid evidence into a single building."
 The Baghdad legend is scenery in House of Wisdom Threshold. The description is "ATTESTED evidence is separated from RECONSTRUCTED institutional relationships, DISPUTED interpretations, ARTISTIC depiction, and UNKNOWN space."
 
-The House of Wisdom is a room. "Bayt al-Hikma is reconstructed cautiously as an Abbasid knowledge institution within wider court, library, administrative, scholarly, and translation networks. The popular image of a completely known universal academy is not treated as a floor plan."\nThe House of Wisdom is east of House of Wisdom Threshold.
+The House of Wisdom is a room.\nThe description of the House of Wisdom is "Bayt al-Hikma is reconstructed cautiously as an Abbasid knowledge institution within wider court, library, administrative, scholarly, and translation networks. The popular image of a completely known universal academy is not treated as a floor plan."\nThe House of Wisdom is east of House of Wisdom Threshold.
 The translation desk is scenery in House of Wisdom. The description is "An ARTISTIC interface for exploring historically evidenced translation and knowledge-transfer networks. Its furniture and exact placement are not asserted to be historical."
 
 Terminal is west of Orientation. "A plain interface waits for human activity. It reports no modification authority."
