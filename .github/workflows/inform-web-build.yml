@@ -19,7 +19,7 @@ jobs:
           git clone --depth 1 https://github.com/ganelson/inform.git ../inform-toolchain
           (cd .. && bash inweb/scripts/first.sh linux)
           (cd .. && bash intest/scripts/first.sh linux)
-          (cd .. && bash inform-toolchain/scripts/first.sh linux)
+          (cd ../inform-toolchain && bash scripts/first.sh linux)
       - name: Compile reconstruction source to Glulx
         run: |
           mkdir -p build
