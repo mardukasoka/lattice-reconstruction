@@ -1,0 +1,32 @@
+name: Build Inform web prototype
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "inform/**"
+      - ".github/workflows/inform-web-build.yml"
+
+jobs:
+  build-inform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build current Inform toolchain
+        run: |
+          git clone --depth 1 https://github.com/ganelson/inweb.git ../inweb
+          git clone --depth 1 https://github.com/ganelson/intest.git ../intest
+          git clone --depth 1 https://github.com/ganelson/inform.git ../inform-toolchain
+          (cd ../inweb && bash scripts/first.sh)
+          (cd ../intest && bash scripts/first.sh)
+          (cd ../inform-toolchain && bash scripts/first.sh)
+      - name: Compile reconstruction source to Glulx
+        run: |
+          mkdir -p build
+          ../inform-toolchain/inform7/Tangled/inform7             -internal ../inform-toolchain/inform7/Internal             -format=Inform6/32             -o build/auto.inf             inform/Reconstruction.inform/Source/story.ni
+          ../inform-toolchain/inform6/Tangled/inform6             -wE2SDG build/auto.inf build/reconstruction.ulx
+      - name: Upload Glulx story
+        uses: actions/upload-artifact@v4
+        with:
+          name: lattice-reconstruction-glulx
+          path: build/reconstruction.ulx
