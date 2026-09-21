@@ -5,6 +5,7 @@ on:
   pull_request:
     paths:
       - "inform/**"
+      - "web/**"
       - ".github/workflows/inform-web-build.yml"
 
 jobs:
@@ -25,6 +26,21 @@ jobs:
           mkdir -p build
           ../inform-toolchain/inform7/Tangled/inform7             -internal ../inform-toolchain/inform7/Internal             -format=Inform6/32             -o build/auto.inf             inform/Reconstruction.inform/Source/story.ni
           ../inform-toolchain/inform6/Tangled/inform6             -wE2SDG build/auto.inf build/reconstruction.ulx
+      - name: Stage browser release
+        run: |
+          mkdir -p web/play
+          cp build/reconstruction.ulx web/play/reconstruction.ulx
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/quixe.min.js web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/glkote.min.js web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/glkote.css web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/dialog.css web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/jquery-1.12.4.min.js web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/resourcemap.js web/play/
+      - name: Upload browser release
+        uses: actions/upload-artifact@v4
+        with:
+          name: lattice-reconstruction-web
+          path: web/
       - name: Upload Glulx story
         uses: actions/upload-artifact@v4
         with:
