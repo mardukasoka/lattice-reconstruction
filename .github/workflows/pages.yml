@@ -1,0 +1,60 @@
+name: Deploy Lattice Reconstruction to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build current Inform toolchain
+        run: |
+          cd ..
+          git clone --depth 1 https://github.com/ganelson/inweb.git
+          git clone --depth 1 https://github.com/ganelson/intest.git
+          git clone --depth 1 https://github.com/ganelson/inform.git inform-toolchain
+          (cd inweb && bash scripts/first.sh linux)
+          (cd intest && bash scripts/first.sh linux)
+          (cd inform-toolchain && bash scripts/first.sh linux)
+      - name: Compile reconstruction source to Glulx
+        run: |
+          mkdir -p build
+          ../inform-toolchain/inform7/Tangled/inform7 -internal ../inform-toolchain/inform7/Internal -format=Inform6/32 -o build/auto.inf inform/Reconstruction.inform/Source/story.ni
+          ../inform-toolchain/inform6/Tangled/inform6 -wE2SDG build/auto.inf build/reconstruction.ulx
+      - name: Stage Quixe browser release
+        run: |
+          mkdir -p web/play
+          cp build/reconstruction.ulx web/play/reconstruction.ulx
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/quixe.min.js web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/glkote.min.js web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/glkote.css web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/dialog.css web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/jquery-1.12.4.min.js web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/resourcemap.js web/play/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
