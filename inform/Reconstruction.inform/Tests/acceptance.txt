@@ -1,0 +1,1 @@
+Test me with "look / north / east / examine damaged diagram / recover / west / north / examine memory housing 01 / open memory housing 01 / south / west / look".
