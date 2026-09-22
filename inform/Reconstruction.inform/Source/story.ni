@@ -127,9 +127,9 @@ Understand "source [Flood Tablet]" or "sources [Flood Tablet]" as source-checkin
 Understand "source [Venus Tablet]" or "sources [Venus Tablet]" as source-checking.
 Carry out source-checking:
 	if the noun is the Flood Tablet:
-		say "K.3375 / AUTHORITATIVE SOURCES[paragraph break]British Museum object W_K-3375.[line break]CDLI P273210 (K 03375 + Rm 0616), with metadata, Akkadian text context, composite linkage and external scholarly resources.[paragraph break]Media policy: museum photography is not embedded here unless its licence is independently compatible with LRA use.";
+		say "K.3375 / AUTHORITATIVE SOURCES[paragraph break]British Museum object W_K-3375.[line break]CDLI P273210 (K 03375 + Rm 0616), with metadata, Akkadian text context, composite linkage and external scholarly resources.[paragraph break]Open image asset: Wikimedia Commons, British Museum Flood Tablet.jpg, photograph by BabelStone, CC0 1.0. This independently licensed photograph may be displayed by LRA, including commercial use. British Museum collection records remain authoritative for object metadata.";
 	otherwise if the noun is the Venus Tablet:
-		say "K.160 / AUTHORITATIVE SOURCES[paragraph break]British Museum object W_K-160.[line break]CDLI identifier P393774 is referenced by the British Museum record.[paragraph break]Media policy: British Museum photography is LINK_ONLY for an affiliate-supported LRA unless commercial permission or another compatible image licence is established."
+		say "K.160 / AUTHORITATIVE SOURCES[paragraph break]British Museum object W_K-160.[line break]CDLI identifier P393774 is referenced by the British Museum record.[paragraph break]Open image asset: Wikimedia Commons, Venus Tablet of Ammisaduqa.jpg, photograph by Fæ, CC BY-SA 3.0 (also offered under GFDL). LRA may display the CC BY-SA image with required attribution, licence link, and modification notice. The British Museum collection image remains LINK_ONLY unless separately licensed."
 
 Section - Alexandria
 
