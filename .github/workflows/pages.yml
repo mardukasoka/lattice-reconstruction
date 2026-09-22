@@ -42,8 +42,11 @@ jobs:
           cp ../inform-toolchain/inform7/Internal/Templates/Quixe/dialog.css web/play/
           cp ../inform-toolchain/inform7/Internal/Templates/Quixe/jquery-1.12.4.min.js web/play/
           cp ../inform-toolchain/inform7/Internal/Templates/Quixe/resourcemap.js web/play/
-          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/GiLoad.js web/play/ 2>/dev/null || true
-          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/load.js web/play/ 2>/dev/null || true
+          python3 - <<'PY'
+          import base64, pathlib
+          data = base64.b64encode(pathlib.Path('build/reconstruction.ulx').read_bytes()).decode('ascii')
+          pathlib.Path('web/play/reconstruction.js').write_text("window.addEventListener('load',function(){GiLoad.load_run(null,'" + data + "','base64');});\n")
+          PY
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
