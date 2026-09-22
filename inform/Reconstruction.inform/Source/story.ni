@@ -21,7 +21,7 @@ Carry out evidence-checking:
 Operations-indexing is an action applying to nothing.
 Understand "help" or "commands" or "index" or "operations" as operations-indexing.
 Carry out operations-indexing:
-	say "LRA HELP / OPERATIONS[paragraph break]GO TO followed by a site name — travel between knowledge centres.[line break]OBJECTS — list evidence-bearing objects associated with the current centre (catalogue support follows in the next pass).[line break]TEXTS — inspect texts and manuscripts when available.[line break]PEOPLE — inspect historically associated people when available.[line break]MAP — inspect spatial or archaeological context when available.[line break]EVIDENCE / UNCERTAINTY — inspect the evidence state of the current location.[line break]SOURCES — inspect provenance and references when available.[line break]CONSULT — consultation gateway for Council / LibreChat / IRC integration.[line break]LOOK — redisplay the current location.[line break]NORTH / SOUTH / EAST / WEST — local movement only where a supported route exists.[line break]HELP — display this operations page.[line break]RETURN — redisplay the room from which HELP was requested.[paragraph break]Evidence labels: ATTESTED · RECONSTRUCTED · HYPOTHETICAL · DISPUTED · UNKNOWN.[paragraph break]HELP does not move you out of the simulation. Type RETURN to resume your current room.".
+	say "LRA HELP / OPERATIONS[paragraph break]GO TO followed by a site name — travel between knowledge centres.[line break]OBJECTS — list evidence-bearing objects associated with the current centre (catalogue support follows in the next pass).[line break]TEXTS — inspect texts and manuscripts when available.[line break]PEOPLE — inspect historically associated people when available.[line break]MAP — inspect spatial or archaeological context when available.[line break]EVIDENCE / UNCERTAINTY — inspect the evidence state of the current location.[line break]SOURCES — inspect provenance and references when available.[line break]CONSULT — consultation gateway for Council / LibreChat integration.[line break]IRC — show the contextual external-dialogue channel and IRC status.[line break]LOOK — redisplay the current location.[line break]NORTH / SOUTH / EAST / WEST — local movement only where a supported route exists.[line break]HELP — display this operations page.[line break]RETURN — redisplay the room from which HELP was requested.[paragraph break]Evidence labels: ATTESTED · RECONSTRUCTED · HYPOTHETICAL · DISPUTED · UNKNOWN.[paragraph break]HELP does not move you out of the simulation. Type RETURN to resume your current room.".
 
 Help-returning is an action applying to nothing.
 Understand "return" or "back" or "resume" as help-returning.
@@ -58,6 +58,30 @@ Carry out Sinai-going: move the player to the Saint Catherine's Monastery Contex
 Baghdad-going is an action applying to nothing.
 Understand "baghdad" or "bayt al-hikma" or "house of wisdom" or "go to baghdad" or "go to bayt al-hikma" or "go to house of wisdom" as Baghdad-going.
 Carry out Baghdad-going: move the player to the Baghdad Evidence Threshold, without printing a room description; try looking.
+
+
+Section - External dialogue gateway
+
+Irc-indexing is an action applying to nothing.
+Understand "irc" or "chat" as irc-indexing.
+Carry out irc-indexing:
+	say "IRC / EXTERNAL DIALOGUE[paragraph break]Suggested contextual channel: [contextual IRC channel].[line break]IRC discussion is external dialogue, not historical evidence.[line break]The browser bridge provides JOIN, SAY, WHO, and LEAVE once an Ergo WebSocket endpoint is configured.".
+
+To say contextual IRC channel:
+	if the location is the Ugarit City Context or the location is the Ugarit Royal Zone or the location is the Ugarit Acropolis Context:
+		say "#ugarit";
+	otherwise if the location is the Nineveh City Context:
+		say "#nineveh";
+	otherwise if the location is the Alexandria Evidence Threshold:
+		say "#alexandria";
+	otherwise if the location is the Nalanda Mahavihara Context:
+		say "#nalanda";
+	otherwise if the location is the Saint Catherine's Monastery Context:
+		say "#sinai";
+	otherwise if the location is the Baghdad Evidence Threshold:
+		say "#baghdad";
+	otherwise:
+		say "#lra".
 
 Section - Ugarit
 
