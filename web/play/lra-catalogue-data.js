@@ -1,6 +1,14 @@
 window.LRA_CATALOGUE = {
-  centre: "Nineveh",
+  centre: "Nineveh + Ugarit",
   objects: [
+    {
+      id: "AO 16643", title: "Baal Cycle I · KTU 1.1",
+      meta: "Late Bronze Age · RS 3.361 · Ras Shamra Acropolis · House of the High Priest · ATTESTED",
+      image: "",
+      imagePage: "https://collections.louvre.fr/en/ark:/53355/cl010141446",
+      source: "https://collections.louvre.fr/en/ark:/53355/cl010141446",
+      attribution: "Musée du Louvre collection record · image not locally reproduced pending reusable-media verification"
+    },
     {
       id: "K.3375", title: "Flood Tablet",
       meta: "Neo-Assyrian · Kouyunjik · Gilgamesh XI · ATTESTED",
