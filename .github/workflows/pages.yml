@@ -42,6 +42,8 @@ jobs:
           cp ../inform-toolchain/inform7/Internal/Templates/Quixe/dialog.css web/play/
           cp ../inform-toolchain/inform7/Internal/Templates/Quixe/jquery-1.12.4.min.js web/play/
           cp ../inform-toolchain/inform7/Internal/Templates/Quixe/resourcemap.js web/play/
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/GiLoad.js web/play/ 2>/dev/null || true
+          cp ../inform-toolchain/inform7/Internal/Templates/Quixe/load.js web/play/ 2>/dev/null || true
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
