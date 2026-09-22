@@ -45,7 +45,7 @@ jobs:
           python3 - <<'PY'
           import base64, pathlib
           data = base64.b64encode(pathlib.Path('build/reconstruction.ulx').read_bytes()).decode('ascii')
-          pathlib.Path('web/play/reconstruction.js').write_text("window.addEventListener('load',function(){GiLoad.load_run(null,'" + data + "','base64');});\n")
+          pathlib.Path('web/play/reconstruction.js').write_text("window.__latticeStoryBase64='" + data + "';\n")
           PY
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
