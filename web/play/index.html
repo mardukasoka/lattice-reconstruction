@@ -14,8 +14,28 @@
 .WindowFrame a,.BufferWindow a{color:#f0c66d!important;}
 #loadingpane,#errorpane{background:#0b0e0d!important;color:#e8e2d6!important;}
 </style>
+<style>
+#lra-catalogue{position:fixed;right:.6rem;bottom:.6rem;z-index:20;width:min(22rem,calc(100vw - 1.2rem));background:#111513;border:1px solid #4a514c;padding:.7rem;box-sizing:border-box}
+#lra-catalogue summary{cursor:pointer;color:#f0c66d;font-weight:700}
+.lra-object{display:grid;grid-template-columns:72px 1fr;gap:.65rem;margin-top:.65rem;padding-top:.65rem;border-top:1px solid #343a36}
+.lra-object img{width:72px;height:86px;object-fit:cover;background:#090b0a}
+.lra-object strong{display:block}.lra-meta{font-size:.78rem;line-height:1.35;color:#c9cec9}.lra-links a{color:#f0c66d;margin-right:.55rem}
+@media(max-width:600px){#lra-catalogue{font-size:.9rem}.lra-object{grid-template-columns:64px 1fr}.lra-object img{width:64px;height:76px}}
+</style>
 </head>
-<body><div id="gameport"><div id="windowport"></div><div id="loadingpane" class="loading">HISTORICAL KNOWLEDGE CENTRES // loading…</div><div id="errorpane" style="display:none"><div id="errorcontent"></div></div></div>
+<body>
+<details id="lra-catalogue">
+<summary>NINEVEH · OPEN OBJECTS</summary>
+<div class="lra-object">
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/British%20Museum%20Flood%20Tablet.jpg" alt="Flood Tablet K.3375">
+<div><strong>K.3375 · Flood Tablet</strong><div class="lra-meta">Neo-Assyrian · Kouyunjik · Gilgamesh XI · ATTESTED<br>Image: BabelStone · CC0 1.0 · exact object</div><div class="lra-links"><a href="https://commons.wikimedia.org/wiki/File:British_Museum_Flood_Tablet.jpg" target="_blank" rel="noopener">IMAGE</a><a href="https://www.britishmuseum.org/collection/object/W_K-3375" target="_blank" rel="noopener">SOURCE</a></div></div>
+</div>
+<div class="lra-object">
+<img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Venus%20Tablet%20of%20Ammisaduqa.jpg" alt="Venus Tablet K.160">
+<div><strong>K.160 · Venus Tablet</strong><div class="lra-meta">Neo-Assyrian copy · Kouyunjik · ATTESTED<br>Image: Fæ · CC BY-SA 3.0 · exact object · unmodified</div><div class="lra-links"><a href="https://commons.wikimedia.org/wiki/File:Venus_Tablet_of_Ammisaduqa.jpg" target="_blank" rel="noopener">IMAGE</a><a href="https://www.britishmuseum.org/collection/object/W_K-160" target="_blank" rel="noopener">SOURCE</a></div></div>
+</div>
+</details>
+<div id="gameport"><div id="windowport"></div><div id="loadingpane" class="loading">HISTORICAL KNOWLEDGE CENTRES // loading…</div><div id="errorpane" style="display:none"><div id="errorcontent"></div></div></div>
 <script>
 (function(){
   var box=document.querySelector(".loading");
