@@ -103,11 +103,11 @@ Section - Nineveh object catalogue
 
 The Flood Tablet is a thing in the Southwest Palace Recovery Context. The printed name is "Flood Tablet (K.3375)". The description is "A Neo-Assyrian clay tablet from Kouyunjik/Nineveh preserving a witness to Tablet XI of the Epic of Gilgamesh. Modern identifier: British Museum K.3375; CDLI P273210. The object is evidence-bearing; its modern museum location is not its ancient location. Type SOURCE K3375 for authoritative records.". The evidence state of the Flood Tablet is attested. The evidence note of the Flood Tablet is "The tablet, its Kouyunjik provenience, Neo-Assyrian date, Akkadian literary content, and modern collection identity are documented by the British Museum and CDLI. This simulation does not infer an exact ancient shelf or furniture position."
 
-Understand "K3375" or "K.3375" or "flood tablet" or "gilgamesh tablet" as the Flood Tablet.
+Understand "K3375" or "flood tablet" or "gilgamesh tablet" as the Flood Tablet.
 
 The Venus Tablet is a thing in the Nineveh City Context. The printed name is "Venus Tablet (K.160)". The description is "A Neo-Assyrian clay tablet from Kouyunjik containing astrological forecasts and a copy of the Venus Tablet of Ammisaduqa. Modern identifier: British Museum K.160; CDLI P393774. Type SOURCE K160 for the authoritative museum record.". The evidence state of the Venus Tablet is attested. The evidence note of the Venus Tablet is "The British Museum identifies K.160 as a Neo-Assyrian copy from Kouyunjik. Its text preserves much earlier Venus observations associated with Ammisaduqa; the copy date and the date of the observations must not be conflated."
 
-Understand "K160" or "K.160" or "venus tablet" or "ammisaduqa tablet" as the Venus Tablet.
+Understand "K160" or "venus tablet" or "ammisaduqa tablet" as the Venus Tablet.
 
 Object-cataloguing is an action applying to nothing.
 Understand "objects" or "catalogue" or "catalog" as object-cataloguing.
