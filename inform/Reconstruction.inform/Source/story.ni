@@ -1,4 +1,4 @@
-"Historical Knowledge Centres" by Lattice Reconstruction Agents (LRA)
+"Historical Knowledge Centres" by Lattice Reconstruction Agents
 
 The story headline is "Evidence-aware reconstruction environments".
 
