@@ -21,28 +21,34 @@ Carry out evidence-checking:
 Operations-indexing is an action applying to nothing.
 Understand "help" or "commands" or "index" or "operations" as operations-indexing.
 Carry out operations-indexing:
-	say "LRA OPERATIONS INDEX[paragraph break]UGARIT · NINEVEH · ALEXANDRIA · NALANDA · SINAI · BAGHDAD — enter a knowledge centre.[line break]HUB — return to the Reconstruction Hub.[line break]EVIDENCE / UNCERTAINTY — inspect the evidence state of your current location.[line break]LOOK — inspect the current location.[line break]Compass directions such as NORTH, SOUTH, EAST, and WEST — move where a local exit exists.[paragraph break]Only meaningful routes exist in each reconstruction. Context-sensitive operations will be added next.".
+	say "LRA HELP / OPERATIONS[paragraph break]GO TO [site] — travel between knowledge centres.[line break]OBJECTS — list evidence-bearing objects associated with the current centre (catalogue support follows in the next pass).[line break]TEXTS — inspect texts and manuscripts when available.[line break]PEOPLE — inspect historically associated people when available.[line break]MAP — inspect spatial or archaeological context when available.[line break]EVIDENCE / UNCERTAINTY — inspect the evidence state of the current location.[line break]SOURCES — inspect provenance and references when available.[line break]CONSULT — consultation gateway for Council / LibreChat / IRC integration.[line break]LOOK — redisplay the current location.[line break]NORTH / SOUTH / EAST / WEST — local movement only where a supported route exists.[line break]HELP — display this operations page.[line break]RETURN — redisplay the room from which HELP was requested.[paragraph break]Evidence labels: ATTESTED · RECONSTRUCTED · HYPOTHETICAL · DISPUTED · UNKNOWN.[paragraph break]HELP does not move you out of the simulation. Type RETURN to resume your current room.".
+
+Help-returning is an action applying to nothing.
+Understand "return" or "back" or "resume" as help-returning.
+Carry out help-returning:
+	say "Returning to [the location].[paragraph break]";
+	try looking.
 
 Hub-returning is an action applying to nothing.
-Understand "hub" or "libraries" as hub-returning.
+Understand "hub" or "libraries" or "go to hub" as hub-returning.
 Carry out hub-returning:
 	move the player to the Reconstruction Hub, without printing a room description;
 	try looking.
 
 Ugarit-going is an action applying to nothing.
-Understand "ugarit" as Ugarit-going.
+Understand "ugarit" or "go to ugarit" as Ugarit-going.
 Carry out Ugarit-going: move the player to the Ugarit City Context, without printing a room description; try looking.
 
 Nineveh-going is an action applying to nothing.
-Understand "nineveh" as Nineveh-going.
+Understand "nineveh" or "go to nineveh" as Nineveh-going.
 Carry out Nineveh-going: move the player to the Nineveh City Context, without printing a room description; try looking.
 
 Alexandria-going is an action applying to nothing.
-Understand "alexandria" as Alexandria-going.
+Understand "alexandria" or "go to alexandria" as Alexandria-going.
 Carry out Alexandria-going: move the player to the Alexandria Evidence Threshold, without printing a room description; try looking.
 
 Nalanda-going is an action applying to nothing.
-Understand "nalanda" as Nalanda-going.
+Understand "nalanda" or "go to nalanda" as Nalanda-going.
 Carry out Nalanda-going: move the player to the Nalanda Mahavihara Context, without printing a room description; try looking.
 
 Sinai-going is an action applying to nothing.
@@ -50,7 +56,7 @@ Understand "sinai" or "saint catherine's" or "saint catherine" as Sinai-going.
 Carry out Sinai-going: move the player to the Saint Catherine's Monastery Context, without printing a room description; try looking.
 
 Baghdad-going is an action applying to nothing.
-Understand "baghdad" or "bayt al-hikma" or "house of wisdom" as Baghdad-going.
+Understand "baghdad" or "bayt al-hikma" or "house of wisdom" or "go to baghdad" or "go to bayt al-hikma" or "go to house of wisdom" as Baghdad-going.
 Carry out Baghdad-going: move the player to the Baghdad Evidence Threshold, without printing a room description; try looking.
 
 Section - Ugarit
@@ -98,4 +104,4 @@ The Bayt al-Hikma Hypothesis Space is north of the Baghdad Evidence Threshold. "
 When play begins:
 	say "HISTORICAL KNOWLEDGE CENTRES // reconstruction network[paragraph break]";
 	say "This simulation separates attested evidence from reconstruction and hypothesis.[paragraph break]";
-	say "Type a site name to enter it; type HUB to return; type EVIDENCE to inspect uncertainty. Type HELP for the operations index.[paragraph break]".
+	say "Type GO TO followed by a site name to enter a knowledge centre; type GO TO HUB to return; type EVIDENCE to inspect uncertainty. Type HELP for the operations index.[paragraph break]".
