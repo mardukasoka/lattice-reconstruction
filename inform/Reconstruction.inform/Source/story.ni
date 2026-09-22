@@ -18,6 +18,11 @@ Understand "evidence" or "uncertainty" as evidence-checking.
 Carry out evidence-checking:
 	say "Evidence state: [evidence state of the location].[paragraph break][evidence note of the location]".
 
+Operations-indexing is an action applying to nothing.
+Understand "help" or "commands" or "index" or "operations" as operations-indexing.
+Carry out operations-indexing:
+	say "LRA OPERATIONS INDEX[paragraph break]UGARIT · NINEVEH · ALEXANDRIA · NALANDA · SINAI · BAGHDAD — enter a knowledge centre.[line break]HUB — return to the Reconstruction Hub.[line break]EVIDENCE / UNCERTAINTY — inspect the evidence state of your current location.[line break]LOOK — inspect the current location.[line break]Compass directions such as NORTH, SOUTH, EAST, and WEST — move where a local exit exists.[paragraph break]Only meaningful routes exist in each reconstruction. Context-sensitive operations will be added next.".
+
 Hub-returning is an action applying to nothing.
 Understand "hub" or "libraries" as hub-returning.
 Carry out hub-returning:
