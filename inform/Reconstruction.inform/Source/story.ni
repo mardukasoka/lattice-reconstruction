@@ -21,7 +21,7 @@ Carry out evidence-checking:
 Operations-indexing is an action applying to nothing.
 Understand "help" or "commands" or "index" or "operations" as operations-indexing.
 Carry out operations-indexing:
-	say "LRA HELP / OPERATIONS[paragraph break]GO TO followed by a site name — travel between knowledge centres.[line break]OBJECTS — list evidence-bearing objects associated with the current centre (catalogue support follows in the next pass).[line break]TEXTS — inspect texts and manuscripts when available.[line break]PEOPLE — inspect historically associated people when available.[line break]MAP — inspect spatial or archaeological context when available.[line break]EVIDENCE / UNCERTAINTY — inspect the evidence state of the current location.[line break]SOURCES — inspect provenance and references when available.[line break]CONSULT — consultation gateway for Council / LibreChat integration.[line break]IRC — show the contextual external-dialogue channel and IRC status.[line break]LOOK — redisplay the current location.[line break]NORTH / SOUTH / EAST / WEST — local movement only where a supported route exists.[line break]HELP — display this operations page.[line break]RETURN — redisplay the room from which HELP was requested.[paragraph break]Evidence labels: ATTESTED · RECONSTRUCTED · HYPOTHETICAL · DISPUTED · UNKNOWN.[paragraph break]HELP does not move you out of the simulation. Type RETURN to resume your current room.".
+	say "LRA HELP / OPERATIONS[paragraph break]GO TO followed by a site name — travel between knowledge centres.[line break]OBJECTS — list verified evidence-bearing objects associated with the current centre.[line break]TEXTS — inspect texts and manuscripts when available.[line break]PEOPLE — inspect historically associated people when available.[line break]MAP — inspect spatial or archaeological context when available.[line break]EVIDENCE / UNCERTAINTY — inspect the evidence state of the current location.[line break]SOURCES — inspect provenance and references when available.[line break]CONSULT — consultation gateway for Council / LibreChat integration.[line break]IRC — show the contextual external-dialogue channel and IRC status.[line break]LOOK — redisplay the current location.[line break]NORTH / SOUTH / EAST / WEST — local movement only where a supported route exists.[line break]HELP — display this operations page.[line break]RETURN — redisplay the room from which HELP was requested.[paragraph break]Evidence labels: ATTESTED · RECONSTRUCTED · HYPOTHETICAL · DISPUTED · UNKNOWN.[paragraph break]HELP does not move you out of the simulation. Type RETURN to resume your current room.".
 
 Help-returning is an action applying to nothing.
 Understand "return" or "back" or "resume" as help-returning.
@@ -98,6 +98,38 @@ The Nineveh City Context is a room. "Nineveh contains palace contexts associated
 The Southwest Palace Recovery Context is north of the Nineveh City Context. "Rooms conventionally numbered 40 and 41 are important excavation recovery contexts. Their excavation labels do not by themselves prove purpose-built library-room functions." The evidence state of the Southwest Palace Recovery Context is attested. The evidence note is "Recovery from the Southwest Palace is attested. Precise pre-destruction distribution and furniture are not."
 
 The North Palace Recovery Context is east of the Nineveh City Context. "The North Palace, including the excavation context known as Room C, yielded tablets. Modern identifiers and fragment joins can be explored without pretending they reproduce an ancient catalogue." The evidence state of the North Palace Recovery Context is attested. The evidence note is "Palace and recovery contexts are attested; original arrangement is incompletely recoverable."
+
+Section - Nineveh object catalogue
+
+The Flood Tablet is a thing in the Southwest Palace Recovery Context. The printed name is "Flood Tablet (K.3375)". The description is "A Neo-Assyrian clay tablet from Kouyunjik/Nineveh preserving a witness to Tablet XI of the Epic of Gilgamesh. Modern identifier: British Museum K.3375; CDLI P273210. The object is evidence-bearing; its modern museum location is not its ancient location. Type SOURCE K3375 for authoritative records.". The evidence state of the Flood Tablet is attested. The evidence note of the Flood Tablet is "The tablet, its Kouyunjik provenience, Neo-Assyrian date, Akkadian literary content, and modern collection identity are documented by the British Museum and CDLI. This simulation does not infer an exact ancient shelf or furniture position."
+
+Understand "K3375" or "K.3375" or "flood tablet" or "gilgamesh tablet" as the Flood Tablet.
+
+The Venus Tablet is a thing in the Nineveh City Context. The printed name is "Venus Tablet (K.160)". The description is "A Neo-Assyrian clay tablet from Kouyunjik containing astrological forecasts and a copy of the Venus Tablet of Ammisaduqa. Modern identifier: British Museum K.160; CDLI P393774. Type SOURCE K160 for the authoritative museum record.". The evidence state of the Venus Tablet is attested. The evidence note of the Venus Tablet is "The British Museum identifies K.160 as a Neo-Assyrian copy from Kouyunjik. Its text preserves much earlier Venus observations associated with Ammisaduqa; the copy date and the date of the observations must not be conflated."
+
+Understand "K160" or "K.160" or "venus tablet" or "ammisaduqa tablet" as the Venus Tablet.
+
+Object-cataloguing is an action applying to nothing.
+Understand "objects" or "catalogue" or "catalog" as object-cataloguing.
+Carry out object-cataloguing:
+	if the location is the Nineveh City Context or the location is the Southwest Palace Recovery Context or the location is the North Palace Recovery Context:
+		say "NINEVEH / OBJECT CATALOGUE[paragraph break]K.3375 — Flood Tablet — Neo-Assyrian — Akkadian — Gilgamesh XI witness — ATTESTED.[line break]K.160 — Venus Tablet — Neo-Assyrian copy — astrological/astronomical tradition — ATTESTED.[paragraph break]Commands: EXAMINE K3375 · EXAMINE K160 · SOURCE K3375 · SOURCE K160 · EVIDENCE K3375 · EVIDENCE K160.[paragraph break]Ancient context, archaeological findspot, and modern museum location are kept distinct.";
+	otherwise:
+		say "No object catalogue has yet been admitted for this knowledge centre. Only verified objects will be added."
+
+Object-evidence-checking is an action applying to one visible thing.
+Understand "evidence [something]" as object-evidence-checking.
+Carry out object-evidence-checking:
+	say "Evidence state: [evidence state of the noun].[paragraph break][evidence note of the noun]".
+
+Source-checking is an action applying to one thing.
+Understand "source [Flood Tablet]" or "sources [Flood Tablet]" as source-checking.
+Understand "source [Venus Tablet]" or "sources [Venus Tablet]" as source-checking.
+Carry out source-checking:
+	if the noun is the Flood Tablet:
+		say "K.3375 / AUTHORITATIVE SOURCES[paragraph break]British Museum object W_K-3375.[line break]CDLI P273210 (K 03375 + Rm 0616), with metadata, Akkadian text context, composite linkage and external scholarly resources.[paragraph break]Media policy: museum photography is not embedded here unless its licence is independently compatible with LRA use.";
+	otherwise if the noun is the Venus Tablet:
+		say "K.160 / AUTHORITATIVE SOURCES[paragraph break]British Museum object W_K-160.[line break]CDLI identifier P393774 is referenced by the British Museum record.[paragraph break]Media policy: British Museum photography is LINK_ONLY for an affiliate-supported LRA unless commercial permission or another compatible image licence is established."
 
 Section - Alexandria
 
