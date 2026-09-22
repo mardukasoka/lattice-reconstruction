@@ -14,6 +14,17 @@
   function show(msg){ if(box) box.textContent="RUNTIME DIAGNOSTIC // "+msg; }
   window.addEventListener("error",function(e){show("ERROR: "+(e.message||"unknown")+" @ "+(e.filename||"script")+":"+(e.lineno||"?"));});
   window.addEventListener("unhandledrejection",function(e){show("PROMISE: "+String(e.reason||"unknown"));});
-  window.addEventListener("load",function(){\n    show("starting story; Quixe="+(!!window.Quixe)+" GiLoad="+(!!window.GiLoad)+" GlkOte="+(!!window.GlkOte)+" payload="+(!!window.__latticeStoryBase64));\n    try {\n      if(!window.GiLoad) throw new Error("GiLoad missing");\n      if(!window.__latticeStoryBase64) throw new Error("story payload missing");\n      GiLoad.load_run(null,window.__latticeStoryBase64,"base64");\n    } catch(e) { show("START ERROR: "+e.name+": "+e.message); return; }\n    setTimeout(function(){\n      if(box && /RUNTIME DIAGNOSTIC/.test(box.textContent)) show("startup returned but UI stalled");\n    },3000);\n  });
+  window.addEventListener("load",function(){
+    show("starting story; Quixe="+(!!window.Quixe)+" GiLoad="+(!!window.GiLoad)+" GlkOte="+(!!window.GlkOte)+" payload="+(!!window.__latticeStoryBase64));
+    try {
+      if(!window.GiLoad) throw new Error("GiLoad missing");
+      if(!window.__latticeStoryBase64) throw new Error("story payload missing");
+      GiLoad.load_run(null,window.__latticeStoryBase64,"base64");
+    } catch(e) { show("START ERROR: "+e.name+": "+e.message); return; }
+    setTimeout(function(){
+      if(box && /RUNTIME DIAGNOSTIC/.test(box.textContent)) show("startup returned but UI stalled");
+    },3000);
+  });
 })();
-</script>\n<script src="reconstruction.js"></script></body></html>
+</script>
+<script src="reconstruction.js"></script></body></html>
