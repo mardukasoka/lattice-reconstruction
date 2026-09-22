@@ -1,4 +1,4 @@
-"Historical Knowledge Centres" by Fynder Enlil
+"Historical Knowledge Centres" by Lattice Reconstruction Agents (LRA)
 
 The story headline is "Evidence-aware reconstruction environments".
 
@@ -93,4 +93,4 @@ The Bayt al-Hikma Hypothesis Space is north of the Baghdad Evidence Threshold. "
 When play begins:
 	say "HISTORICAL KNOWLEDGE CENTRES // reconstruction network[paragraph break]";
 	say "This simulation separates attested evidence from reconstruction and hypothesis.[paragraph break]";
-	say "Type a site name to enter it; type HUB to return; type EVIDENCE to inspect uncertainty.[paragraph break]".
+	say "Type a site name to enter it; type HUB to return; type EVIDENCE to inspect uncertainty. Type HELP for the operations index.[paragraph break]".
