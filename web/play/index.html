@@ -8,4 +8,18 @@
 <script src="jquery-1.12.4.min.js"></script><script src="glkote.min.js"></script><script src="quixe.min.js"></script><script src="resourcemap.js"></script>
 </head>
 <body><div id="gameport"><div class="loading">HISTORICAL KNOWLEDGE CENTRES // loading…</div></div>
+<script>
+(function(){
+  var box=document.querySelector(".loading");
+  function show(msg){ if(box) box.textContent="RUNTIME DIAGNOSTIC // "+msg; }
+  window.addEventListener("error",function(e){show("ERROR: "+(e.message||"unknown")+" @ "+(e.filename||"script")+":"+(e.lineno||"?"));});
+  window.addEventListener("unhandledrejection",function(e){show("PROMISE: "+String(e.reason||"unknown"));});
+  window.addEventListener("load",function(){
+    show("page loaded; Quixe="+(!!window.Quixe)+" GiLoad="+(!!window.GiLoad)+" GlkOte="+(!!window.GlkOte));
+    setTimeout(function(){
+      if(box && /RUNTIME DIAGNOSTIC/.test(box.textContent)) show("startup stalled; Quixe="+(!!window.Quixe)+" GiLoad="+(!!window.GiLoad)+" GlkOte="+(!!window.GlkOte));
+    },3000);
+  });
+})();
+</script>
 <script src="reconstruction.js"></script></body></html>
