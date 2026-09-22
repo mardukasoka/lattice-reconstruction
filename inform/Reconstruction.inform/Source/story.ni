@@ -1,4 +1,4 @@
-"Historical Knowledge Centres" by Fynder Enlil
+"Historical Knowledge Centres" by Lattice Reconstruction Agents
 
 The story headline is "Evidence-aware reconstruction environments".
 
@@ -17,6 +17,11 @@ Evidence-checking is an action applying to nothing.
 Understand "evidence" or "uncertainty" as evidence-checking.
 Carry out evidence-checking:
 	say "Evidence state: [evidence state of the location].[paragraph break][evidence note of the location]".
+
+Operations-indexing is an action applying to nothing.
+Understand "help" or "commands" or "index" or "operations" as operations-indexing.
+Carry out operations-indexing:
+	say "LRA OPERATIONS INDEX[paragraph break]UGARIT · NINEVEH · ALEXANDRIA · NALANDA · SINAI · BAGHDAD — enter a knowledge centre.[line break]HUB — return to the Reconstruction Hub.[line break]EVIDENCE / UNCERTAINTY — inspect the evidence state of your current location.[line break]LOOK — inspect the current location.[line break]Compass directions such as NORTH, SOUTH, EAST, and WEST — move where a local exit exists.[paragraph break]Only meaningful routes exist in each reconstruction. Context-sensitive operations will be added next.".
 
 Hub-returning is an action applying to nothing.
 Understand "hub" or "libraries" as hub-returning.
@@ -93,4 +98,4 @@ The Bayt al-Hikma Hypothesis Space is north of the Baghdad Evidence Threshold. "
 When play begins:
 	say "HISTORICAL KNOWLEDGE CENTRES // reconstruction network[paragraph break]";
 	say "This simulation separates attested evidence from reconstruction and hypothesis.[paragraph break]";
-	say "Type a site name to enter it; type HUB to return; type EVIDENCE to inspect uncertainty.[paragraph break]".
+	say "Type a site name to enter it; type HUB to return; type EVIDENCE to inspect uncertainty. Type HELP for the operations index.[paragraph break]".
