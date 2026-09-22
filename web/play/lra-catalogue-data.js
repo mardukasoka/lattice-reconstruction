@@ -2,6 +2,16 @@ window.LRA_CATALOGUE = {
   centre: "Nineveh + Ugarit",
   objects: [
     {
+      id: "RS 12.061", title: "KTU 1.78 · Astronomical / divinatory report",
+      meta: "Late Bronze Age · Ugarit Royal Palace West Archive · celestial interpretation DISPUTED",
+      image: "",
+      imagePage: "https://www.mission-ougarit.fr/",
+      source: "https://www.mission-ougarit.fr/",
+      attribution: "No reusable exact-object image verified · Uranometria research bridge candidate",
+      uranometria_link: true,
+      evidence: "DISPUTED"
+    },
+    {
       id: "AO 16643", title: "Baal Cycle I · KTU 1.1",
       meta: "Late Bronze Age · RS 3.361 · Ras Shamra Acropolis · House of the High Priest · ATTESTED",
       image: "",
