@@ -4,10 +4,10 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Historical Knowledge Centres — Play</title>
 <link rel="stylesheet" href="glkote.css"><link rel="stylesheet" href="dialog.css">
-<style>html,body{margin:0;min-height:100%;background:#090b0a;color:#d8e1dc}body{font-family:ui-monospace,monospace}#gameport{min-height:100vh}.loading{padding:1rem}</style>
+<style>html,body{margin:0;width:100%;height:100%;background:#090b0a;color:#d8e1dc}body{font-family:ui-monospace,monospace}#gameport{position:relative;width:100%;height:100vh;min-height:100vh}#windowport{position:absolute;inset:0}.loading{padding:1rem;position:relative;z-index:2}</style>
 <script src="jquery-1.12.4.min.js"></script><script src="glkote.min.js"></script><script src="quixe.min.js"></script><script src="resourcemap.js"></script>
 </head>
-<body><div id="gameport"><div class="loading">HISTORICAL KNOWLEDGE CENTRES // loading…</div></div>
+<body><div id="gameport"><div id="windowport"></div><div id="loadingpane" class="loading">HISTORICAL KNOWLEDGE CENTRES // loading…</div><div id="errorpane" style="display:none"><div id="errorcontent"></div></div></div>
 <script>
 (function(){
   var box=document.querySelector(".loading");
