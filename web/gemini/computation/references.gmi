@@ -1,0 +1,34 @@
+# Lattice Computation: Reference Register
+=> index.gmi Research manuscript
+=> spheres.gmi Conceptual spheres
+
+## Primary literary and screen works
+Philip K. Dick, VALIS (1981); The Exegesis of Philip K. Dick (published 2011, edited posthumously).
+Douglas Adams, The Hitchhiker's Guide to the Galaxy (radio series 1978; novel 1979).
+Doctor Who, The Face of Evil (1977), Logopolis (1981), The Long Game (2005), Silence in the Library / Forest of the Dead (2008).
+Hidden Figures (2016 film); Margot Lee Shetterly, Hidden Figures (2016 book).
+Rachel Carson, Silent Spring (1962).
+Mary Shelley, Frankenstein (1818); Karel Capek, R.U.R. (1920); Metropolis (1927).
+Star Trek, especially Data; other fictional comparisons include HAL 9000, GERTY, GAIA, The Machine, Culture Minds, Skynet, Cosmic AC and RoboCop.
+
+## Philosophy, social systems and science
+Ferdinand de Saussure, Course in General Linguistics (1916, posthumous).
+Claude Levi-Strauss, structural anthropology; Jacques Lacan, psychoanalytic theory.
+Yuri Lotman, Universe of the Mind (1990).
+Vladimir Vernadsky and Pierre Teilhard de Chardin, noosphere traditions.
+Donna Haraway, A Cyborg Manifesto (1985).
+Gregory Bateson, Steps to an Ecology of Mind (1972).
+Nick Land, Fanged Noumena (collected 2011); CCRU writings on hyperstition and the Numogram.
+Kurt Godel, incompleteness theorems (1931) — apply within their mathematical assumptions.
+NASA historical material on human computers, Katherine Johnson, Dorothy Vaughan and Mary Jackson.
+Ancient Mesopotamian accounting tablets and early numerical systems — individual artifact identifications require source verification.
+Roko's Basilisk — internet thought experiment, not a scientific finding.
+
+## Public reference gateways
+=> https://www.nasa.gov/ NASA history and missions
+=> https://www.britannica.com/ Encyclopaedia Britannica
+=> https://www.bbc.co.uk/ BBC Doctor Who material
+=> https://tardis.fandom.com/wiki/Logopolis Logopolis fan reference (secondary)
+=> https://en.wikipedia.org/wiki/Gemini_(protocol) Gemini protocol background
+
+Source register is preliminary. Distinguish primary works, secondary commentary and interpretive comparisons; no claim of fully verified quotations or rights clearance.
