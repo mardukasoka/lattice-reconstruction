@@ -1,0 +1,40 @@
+# Lattice: From Human Computers to Planetary Intelligence
+## Research extension | 10 November 2026
+=> ../index.gmi Lattice Reconstruction Archive
+=> spheres.gmi Spheres and meme computers
+=> references.gmi References and provenance
+
+This research extension compares real historical computation, fictional planetary computers, philosophical interpretations, and speculative models. It is not part of the recovered fictional LR-0001 dialogue and does not establish shared canon.
+
+## From symbols to processes
+Mesopotamian accounting tablets and scribal institutions -> numerical tables and abaci -> human computing bureaux -> NASA human computers -> FORTRAN and electronic computing -> distributed AI and multi-agent systems -> speculative planetary/civilisational computation.
+
+Katherine Johnson, Dorothy Vaughan and Mary Jackson exemplify skilled human mathematical work at NASA; the film Hidden Figures dramatizes their history. Vaughan's FORTRAN work connects the human-computer era to programming.
+
+## Fictional case studies
+Doctor Who: Logopolis (1981) — collective block-transfer computation helps counter cosmic entropy.
+Doctor Who: The Face of Evil (1977) — damaged computer Xoanon is interpreted as a god.
+Doctor Who: The Long Game (2005) — human neural interfaces and manipulated information flows.
+Doctor Who: Forest of the Dead (2008) — CAL's human consciousness supports a vast Library computer.
+Douglas Adams: Deep Thought calculates 42, the Answer without its Question; Earth is designed as a planetary computer to discover the Question.
+Philip K. Dick: VALIS (1981) — fictional revelatory intelligence, informed by Dick's reported experiences; the novel, reports, and metaphysical interpretations are separate records.
+Other comparisons: HAL 9000, GERTY, Data, The Machine, GAIA, Culture Minds, Skynet, Poe, Dorian, Cosmic AC, RoboCop and Terminator.
+
+## Philosophical and real-world cases
+Structuralism and semiotics: Saussure, Levi-Strauss, Lacan, Lotman; symbolic structures shape thought and meaning. 'Structures speak us' is a thematic paraphrase.
+Haraway: cyborg boundaries between humans, technology and institutions.
+Bateson: ecology of mind, communication, difference and feedback.
+Nick Land and CCRU: technocapitalism as a cybernetic, accelerating process. Claims of literal future AI directing the past are speculative, not demonstrated.
+Roko's Basilisk: a hypothetical future-AI decision-theoretic thought experiment, not evidence of actual punishment or retrocausality.
+Rachel Carson's Silent Spring (1962): scientific observation -> public interpretation -> environmental movements -> policy/practice -> further ecological feedback. This is historically grounded sociotechnical change, not proof of a conscious planetary mind.
+
+## Universality, incompleteness, and caution
+Distinguish epistemic incompleteness, formal computational limits and normative uncertainty. Godel's incompleteness theorems apply to specified formal systems; they do not prove that all societies are incomplete in the same mathematical sense.
+Computation does not by itself demonstrate intelligence, agency, sentience or consciousness.
+Model boundaries are not reality boundaries. Possibility is not evidence.
+
+## St Elsewhere / Lattice relationship
+These references can extend the St Elsewhere universe as comparative fictional, symbolic and processual material while retaining their original authorship and independent fictional continuities. Lattice is a research and reconstruction frame, not a claim of shared canon.
+No Inform 7 source or runtime was changed.
+=> spheres.gmi Map the conceptual spheres and meme computers
+=> references.gmi Open the bibliography
