@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lattice · AI & Technology Evolution Atlas</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#080f18;color:#e4edf7}*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:1200px;margin:auto;padding:14px 18px}a{color:#9dd8ff}.sub{color:#aabbd0;font-size:.85rem}h1{font-size:clamp(1.35rem,4vw,2rem);margin:.4rem 0}h2{font-size:1rem;margin:0 0 8px}.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:12px 0}.controls label{display:grid;gap:4px;font-size:.78rem;color:#bbcbdd}select,button,input{accent-color:#6db7ff}select,button{background:#152337;border:1px solid #385574;color:#e4edf7;border-radius:7px;padding:9px;min-height:38px}button{cursor:pointer}.panel{background:#0e1b2c;border:1px solid #29435e;border-radius:12px;padding:12px}.stage{position:relative;overflow:hidden}canvas{width:100%;height:min(65vh,560px);min-height:340px;display:block;touch-action:none;cursor:grab}.tip{position:absolute;bottom:8px;left:12px;font-size:.72rem;color:#b6c9dc;pointer-events:none}.detail{min-height:75px;line-height:1.5}.key{display:flex;gap:15px;flex-wrap:wrap;font-size:.75rem;color:#b6c9dc}.sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:12px}@media(max-width:750px){.layout{grid-template-columns:1fr}canvas{height:420px}}.small{font-size:.78rem;color:#b6c9dc}footer{font-size:.75rem;color:#9bb0c8}
+</style></head><body>
+<header><a href="./">← Lattice</a><h1>AI & Technology Evolution Atlas</h1><div class="sub">Explorable 3D research matrix · X intelligence · Y technology family · Z evolution maturity · fictional profiles are interpretive</div></header>
+<main><div class="controls">
+<label>Fictional intelligence<select id="system"><option value="Data">Data</option><option value="HAL">HAL 9000</option><option value="GAIA">GAIA</option><option value="Skynet">Skynet</option><option value="Machine">The Machine</option><option value="Culture">Culture Mind</option><option value="Cosmic">Cosmic AC</option><option value="all">All (overview)</option></select></label>
+<label>Technology family<select id="family"><option value="all">All families</option></select></label>
+<label>Z maturity ceiling <span id="zvalue">5</span><input id="z" type="range" min="1" max="5" value="5"></label>
+<label>Historical layer<select id="history"><option value="on">Show foundations</option><option value="off">Hide foundations</option></select></label>
+<button id="reset">Reset camera</button><button id="labels">Show labels</button>
+</div><div class="layout"><section class="panel stage"><canvas id="view" aria-label="Interactive rotatable three dimensional matrix of intelligence, technology families, and maturity"></canvas><div class="tip">Drag to rotate · pinch or wheel to zoom · tap a point for details</div></section>
+<aside class="panel"><h2>Selected record</h2><div id="detail" class="detail small">Select a marker to inspect its technology and maturity.</div><hr style="border:0;border-top:1px solid #29435e"><h2>Coordinate system</h2><p class="small"><b>X</b> −4 cave tallies · −3 human/animal systems · −2 mechanical · −1 electronic non-AI · 0 transition · 1 NAI · 2 AGI · 3 ASI · 4 transcendent · 5 cosmic · 6 godlike.</p><p class="small"><b>Y</b> technology families (separate branches).</p><p class="small"><b>Z</b> illustrative maturity 1–5, relative to each branch; not a universal ranking.</p><div class="key"><span><i class="sw" style="background:#d9a55d"></i>Historical</span><span><i class="sw" style="background:#63b9a2"></i>Real</span><span><i class="sw" style="background:#83aaff"></i>Fictional</span></div><p class="small">Historical time is reserved for a future slider. Unknown capabilities are not scored.</p></aside></div>
+</main><footer>Research prototype. Fictional characters, imagined technology, and historical evidence are distinct. No automatic canon or factual claims are implied by proximity.</footer>
+<script>
+(()=>{
+const families=['Symbolic / meme','Hardware','Input','Output','Memory','Software','Sensors','Embodiment','Robotics','Simulation','Networks','Bio / nano'];
+const profiles={
+Data:{x:2,v:[null,5,5,5,4,5,5,5,5,3,3,null],note:'Star Trek android; embodied general cognition.'},
+HAL:{x:2,v:[null,4,3,4,4,5,4,1,1,4,3,null],note:'2001: A Space Odyssey spacecraft intelligence.'},
+GAIA:{x:3,v:[null,5,3,4,5,5,5,3,4,5,5,null],note:'Horizon planetary ecological intelligence.'},
+Skynet:{x:3,v:[null,5,4,4,5,5,5,5,5,5,5,null],note:'Terminator distributed military AI.'},
+Machine:{x:3,v:[null,4,4,4,5,5,5,2,2,5,5,null],note:'Person of Interest predictive intelligence.'},
+Culture:{x:4,v:[null,5,5,5,5,5,5,5,5,5,5,null],note:'Iain M. Banks Culture Mind.'},
+Cosmic:{x:5,v:[null,5,null,5,5,5,null,null,null,5,5,null],note:'Asimov cosmological intelligence; speculative.'}
+};
+const history=[{n:'Cave tallies',x:-4,y:0,z:1},{n:'Ox-cart coordination',x:-3,y:7,z:1},{n:'Cuneiform records',x:-3,y:0,z:2},{n:'Abacus',x:-2,y:1,z:2},{n:'Telegraph',x:-2,y:10,z:3},{n:'Ticker tape',x:-2,y:3,z:2},{n:'ENIAC',x:-1,y:1,z:3},{n:'Keyboard',x:-1,y:2,z:4},{n:'CLI',x:-1,y:3,z:3},{n:'GUI',x:0,y:3,z:4},{n:'Magnetic tape',x:-1,y:4,z:3},{n:'Meme networks',x:0,y:0,z:4}];
+const c=document.querySelector('#view'),g=c.getContext('2d'),sel=document.querySelector('#system'),fam=document.querySelector('#family'),z=document.querySelector('#z'),detail=document.querySelector('#detail');
+families.forEach((n,i)=>fam.add(new Option(n,String(i))));
+let yaw=-.75,pitch=.48,zoom=1,showLabels=false,drag=null,pointers=new Map(),lastPinch=0,hits=[];
+const xlabels=['−4','−3','−2','−1','0','NAI','AGI','ASI','TI','CI','GI'];
+function render(){
+const w=c.clientWidth,h=c.clientHeight,dpr=Math.min(devicePixelRatio||1,2);c.width=Math.round(w*dpr);c.height=Math.round(h*dpr);g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,w,h);
+const u=Math.min(w/16,h/12)*zoom;
+function project(x,y,zz){x=(x-1)*.86;y=(y-5.5)*.58;zz=(zz-2.5)*1.05;let a=x*Math.cos(yaw)-y*Math.sin(yaw),b=x*Math.sin(yaw)+y*Math.cos(yaw);return [w/2+a*u,h/2+(b*Math.sin(pitch)-zz*Math.cos(pitch))*u]}
+function line(a,b,color,width=1){const p=project(...a),q=project(...b);g.beginPath();g.moveTo(...p);g.lineTo(...q);g.strokeStyle=color;g.lineWidth=width;g.stroke()}
+for(let x=-4;x<=6;x++)line([x,0,0],[x,11,0],'#22384f');
+for(let y=0;y<=11;y++)line([-4,y,0],[6,y,0],'#22384f');
+line([-4,0,0],[6,0,0],'#6ca9f2',2);line([-4,0,0],[-4,11,0],'#dfab67',2);line([-4,0,0],[-4,0,5],'#71c5a8',2);
+g.font='11px system-ui';g.fillStyle='#bcd0e4';
+[['X · intelligence',project(6,0,0)],['Y · families',project(-4,11,0)],['Z · maturity',project(-4,0,5)]].forEach(([t,p])=>g.fillText(t,p[0]+5,p[1]-6));
+if(zoom>.85)for(let x=-4;x<=6;x++){const p=project(x,0,0);g.font='9px system-ui';g.fillText(xlabels[x+4],p[0]-8,p[1]+14)}
+hits=[];
+function dot(n,x,y,zz,color,note){if(zz>+z.value||(fam.value!=='all'&&y!==+fam.value))return;const p=project(x,y,zz),r=5;g.fillStyle=color;g.beginPath();g.arc(...p,r,0,Math.PI*2);g.fill();hits.push({x:p[0],y:p[1],n,tech:families[y],z:zz,note});if(showLabels){g.font='10px system-ui';g.fillStyle='#d9e6f5';g.fillText(n,p[0]+7,p[1]-7)}}
+if(document.querySelector('#history').value==='on')history.forEach(p=>dot(p.n,p.x,p.y,p.z,'#d9a55d','Historical foundation, not AI.'));
+Object.entries(profiles).forEach(([name,p])=>{if(sel.value!=='all'&&sel.value!==name)return;const pts=[];p.v.forEach((zz,y)=>{if(zz==null||zz>+z.value||(fam.value!=='all'&&y!==+fam.value))return;pts.push(project(p.x,y,zz));dot(name,p.x,y,zz,'#83aaff',p.note)});if(sel.value!=='all'&&pts.length>1){g.strokeStyle='#83aaff66';g.lineWidth=1.5;g.beginPath();pts.forEach((q,i)=>i?g.lineTo(...q):g.moveTo(...q));g.stroke()}});
+}
+function reset(){yaw=-.75;pitch=.48;zoom=1;render()}
+document.querySelector('#reset').onclick=reset;document.querySelector('#labels').onclick=e=>{showLabels=!showLabels;e.target.textContent=showLabels?'Hide labels':'Show labels';render()};
+[sel,fam,z,document.querySelector('#history')].forEach(el=>el.addEventListener('input',()=>{document.querySelector('#zvalue').textContent=z.value;render()}));
+c.addEventListener('pointerdown',e=>{c.setPointerCapture(e.pointerId);pointers.set(e.pointerId,[e.clientX,e.clientY]);if(pointers.size===1)drag={x:e.clientX,y:e.clientY,a:yaw,b:pitch,moved:false};if(pointers.size===2){const p=[...pointers.values()];lastPinch=Math.hypot(p[0][0]-p[1][0],p[0][1]-p[1][1]);drag=null}});
+c.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,[e.clientX,e.clientY]);if(pointers.size===2){const p=[...pointers.values()],dist=Math.hypot(p[0][0]-p[1][0],p[0][1]-p[1][1]);if(lastPinch)zoom=Math.max(.45,Math.min(4,zoom*dist/lastPinch));lastPinch=dist;render();return}if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)+Math.abs(dy)>5)drag.moved=true;yaw=drag.a+dx*.009;pitch=Math.max(-1.4,Math.min(1.4,drag.b+dy*.009));render()});
+c.addEventListener('pointerup',e=>{pointers.delete(e.pointerId);if(drag&&!drag.moved){const r=c.getBoundingClientRect(),px=e.clientX-r.left,py=e.clientY-r.top;let hit=hits.filter(q=>Math.hypot(q.x-px,q.y-py)<15).sort((a,b)=>Math.hypot(a.x-px,a.y-py)-Math.hypot(b.x-px,b.y-py))[0];if(hit)detail.textContent=hit.n+' · '+hit.tech+' · Z '+hit.z+'/5. '+hit.note}drag=null;lastPinch=0});
+c.addEventListener('pointercancel',e=>{pointers.delete(e.pointerId);drag=null;lastPinch=0});
+c.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.45,Math.min(4,zoom*(e.deltaY<0?1.12:.89)));render()},{passive:false});
+new ResizeObserver(render).observe(c);render();
+})();
+</script></body></html>
