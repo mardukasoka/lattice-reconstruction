@@ -1,0 +1,34 @@
+# Spheres, Meme Computers and Symbolic Systems
+=> index.gmi Return to the research manuscript
+=> references.gmi Sources
+
+## Diagram terminology
+Patasphere: proposed outer interpretive layer, possibly connected to 'pataphysics; its intended definition remains open.
+Infosphere: information and records.
+Semiosphere: cultural systems of signs and signification (Yuri Lotman).
+Noosphere: planetary human thought and knowledge (Vernadsky; Teilhard de Chardin).
+Logosphere: language, reason, discourse and logos (usage varies).
+Cybersphere: networked digital technologies and computation.
+Simulacrosphere: models, simulations and representations (proposed label).
+
+These are overlapping conceptual domains, not scientifically established concentric physical shells. The noosphere and cybersphere can intersect.
+
+## Meme computers
+A proposed analytic term for distributed systems in which symbols, beliefs, interpretations, institutions, people and machines form information-processing feedback loops with real consequences.
+Example: ecological observations -> Rachel Carson's Silent Spring -> public interpretation -> collective mobilization -> policy -> new environmental observations.
+A process can transform the world without being conscious or a unified intentional agent.
+
+## Comparative poles
+Land: acceleration and technocapital feedback.
+VALIS: fictional revelation and possible corrective intelligence.
+Logopolis: fictional cosmic maintenance through collective computation.
+Deep Thought and Earth: computation, question formation and planetary scale.
+Roko's Basilisk: hypothetical anticipatory incentives, not proven retrocausality.
+Silent Spring: empirically traceable ecological feedback and correction.
+
+## Epistemic labels
+OBSERVED — documented historical/physical process.
+INTERPRETIVE — philosophical model or analogy.
+FICTIONAL — narrative events and entities.
+SPECULATIVE — unverified possibility or extrapolation.
+=> index.gmi Back to research manuscript
