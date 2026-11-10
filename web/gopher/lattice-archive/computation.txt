@@ -1,0 +1,33 @@
+LATTICE RESEARCH EXTENSION — FROM HUMAN COMPUTERS TO PLANETARY INTELLIGENCE
+10 November 2026
+
+From Mesopotamian scribes and numerical records, through human computing bureaux and NASA's human computers, to FORTRAN, electronic machines, AI councils and fictional planetary computation.
+
+Fictional references:
+* Philip K. Dick — VALIS: revelatory intelligence, experiential reports and fiction distinguished.
+* Douglas Adams — Deep Thought and Earth: Answer, Question, planetary computer.
+* Doctor Who — Logopolis: collective computation and cosmic maintenance.
+* Doctor Who — The Face of Evil: Xoanon, damaged computer and divinity.
+* Doctor Who — The Long Game: human-machine information systems.
+* Doctor Who — Forest of the Dead: CAL and the Library computer.
+* Star Trek and St Elsewhere: comparative cross-references, not asserted shared canon.
+
+Philosophical and sociotechnical references:
+* Nick Land and CCRU — technocapitalism, acceleration and hyperstition.
+* Roko's Basilisk — hypothetical future-AI incentive thought experiment.
+* Structuralism, semiotics, Haraway, Bateson, Lotman and the noosphere.
+* Rachel Carson, Silent Spring — ecological feedback and collective correction.
+
+Meme computers: a proposed term for distributed symbolic processes that alter social and material conditions. This does not establish a unified conscious agent.
+
+Universality and incompleteness: models can be partial; undecidability has formal scope; possibilities are not evidence.
+
+Companion Gemini manuscript:
+https://mardukasoka.github.io/lattice-reconstruction/gemini/computation/index.gmi
+Conceptual spheres:
+https://mardukasoka.github.io/lattice-reconstruction/gemini/computation/spheres.gmi
+References:
+https://mardukasoka.github.io/lattice-reconstruction/gemini/computation/references.gmi
+
+The recovered LR-0001 dialogue remains a separate fictional archive.
+No Inform 7 modifications.
