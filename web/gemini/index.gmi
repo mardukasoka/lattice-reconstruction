@@ -4,3 +4,10 @@
 A recovered dialogue concerning the identity of the Lattice, its missing timeline, ANI, Curtains, human/AI survival, and the investigator's own uncertain identity.
 
 The archive is fictional. Reconstructions are not evidence about the real future.
+
+## Research extensions
+=> computation/index.gmi From Human Computers to Planetary Intelligence
+=> computation/spheres.gmi Spheres and meme computers
+=> computation/references.gmi Computation reference register
+
+Research comparisons are separate from fictional recovered dialogue; they do not establish shared canon.
